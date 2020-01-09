@@ -2,28 +2,34 @@
 <!DOCTYPE mapper
    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- <mapper namespace="com.maven.web.dao.UserMapper">
- 
- <select id="select" resultType="user">
-		SELECT * FROM cms_user
+ <mapper namespace="com.maven.web.dao.VoteContentMapper">
+ <select id="select" resultType="VoteContent">
+		SELECT * FROM cms_vote_content
+
 	</select>
-	
-	<select id="selectById" resultType="user">
-		SELECT * FROM cms_user WHERE id=#{id}
+
+	<select id="selectById" resultType="VoteContent">
+		SELECT * FROM cms_vote_content
+		WHERE id=#{id}
+
 	</select>
-	
-	<insert id="insert">
-		INSERT INTO cms_user(username,headimg,password,nickname,birthday,gender,locked,score,role,url,create_time,update_time)VALUES 
-		(#{username},#{headimg},#{password},#{nickname},#{birthday},#{gender},#{locked},#{score},#{role},#{url},#{create_time},#{update_time})
-	</insert>
-	
+
 	<update id="update">
-		UPDATE cms_user
-	 SET username=#{username},headimg=#{headimg},password=#{password},nickname=#{nickname},birthday=#{birthday},gender=#{gender},locked=#{locked},score=#{score},role=#{role},url=#{url},create_time=#{create_time},update_time=#{update_time} 
-	WHERE id=#{id}
+		UPDATE cms_vote_content
+		SET
+		title=#{title},content=#{content}
+		WHERE id=#{id}
+
 	</update>
-	
+
+	<insert id="insert">
+		INSERT INTO cms_vote_content(title,content)VALUES
+		(#{title},#{content})
+
+	</insert>
+
 	<delete id="delete">
-		DELETE FROM cms_user WHERE id in(${ids})
+		DELETE FROM cms_vote_content WHERE id in(${ids})
+
 	</delete>
  </mapper>

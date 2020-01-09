@@ -2,28 +2,34 @@
 <!DOCTYPE mapper
    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- <mapper namespace="com.maven.web.dao.UserMapper">
- 
- <select id="select" resultType="user">
-		SELECT * FROM cms_user
+ <mapper namespace="com.maven.web.dao.SettingsMapper">
+ <select id="select" resultType="Settings">
+		SELECT * FROM cms_settings
+
 	</select>
-	
-	<select id="selectById" resultType="user">
-		SELECT * FROM cms_user WHERE id=#{id}
+
+	<select id="selectById" resultType="Settings">
+		SELECT * FROM cms_settings WHERE id=#{id}
+
 	</select>
-	
-	<insert id="insert">
-		INSERT INTO cms_user(username,headimg,password,nickname,birthday,gender,locked,score,role,url,create_time,update_time)VALUES 
-		(#{username},#{headimg},#{password},#{nickname},#{birthday},#{gender},#{locked},#{score},#{role},#{url},#{create_time},#{update_time})
-	</insert>
-	
+
 	<update id="update">
-		UPDATE cms_user
-	 SET username=#{username},headimg=#{headimg},password=#{password},nickname=#{nickname},birthday=#{birthday},gender=#{gender},locked=#{locked},score=#{score},role=#{role},url=#{url},create_time=#{create_time},update_time=#{update_time} 
-	WHERE id=#{id}
+		UPDATE cms_settings
+		SET
+		site_domain=#{site_domain},site_name=#{site_name},article_list_size=#{article_list_size},slide_size=#{slide_size},admin_username=#{admin_username},admin_password=#{admin_password}
+		WHERE id=#{id}
+
 	</update>
-	
+
+	<insert id="insert">
+		INSERT INTO
+		cms_settings(site_domain,site_name,article_list_size,slide_size,admin_username,admin_password)VALUES
+		(#{site_domain},#{site_name},#{article_list_size},#{slide_size},#{admin_username},#{admin_password})
+
+	</insert>
+
 	<delete id="delete">
-		DELETE FROM cms_user WHERE id in(${ids})
+		DELETE FROM cms_settings WHERE id in(${ids})
 	</delete>
+
  </mapper>
