@@ -1,7 +1,6 @@
 package com.maven.web.pojo;
 
 public class Channel {
-
 	/**  **/
 	private Integer id;
 	/** 名称 **/
@@ -48,5 +47,4 @@ public class Channel {
 				+ sorted + "]";
 	}
 
-	
 }

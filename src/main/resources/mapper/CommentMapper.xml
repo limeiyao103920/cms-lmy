@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
      "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- <mapper namespace="com.maven.web.dao.CommentMapper">
- <select id="select" resultType="Comment">
+<mapper namespace="com.maven.web.dao.CommentDao">
+	<select id="select" resultType="Comment">
 		SELECT * FROM cms_comment
 
 	</select>
@@ -29,4 +29,5 @@
 	<delete id="delete">
 		DELETE FROM cms_comment WHERE id in(${ids})
 	</delete>
- </mapper>
+
+</mapper>

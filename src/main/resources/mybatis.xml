@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 <!-- 别名配置 -->
  <typeAliases>
-   <package name="com.maven.web.entity"/>
+   <package name="com.maven.web.pojo"/>
  </typeAliases>
  
  <!-- 配置分页助手拦截器 -->

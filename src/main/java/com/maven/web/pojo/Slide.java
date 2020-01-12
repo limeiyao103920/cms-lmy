@@ -1,7 +1,10 @@
 package com.maven.web.pojo;
 
+/**
+ * @author 86183
+ *
+ */
 public class Slide {
-
 	/**  **/
 	private Integer id;
 	/** 标题 **/

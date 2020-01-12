@@ -3,7 +3,6 @@ package com.maven.web.pojo;
 import java.util.Date;
 
 public class Collect {
-
 	/**  **/
 	private Integer id;
 	/**  **/
@@ -32,6 +31,7 @@ public class Collect {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	
 	public Date getCreated() {
 		return created;
 	}
@@ -44,14 +44,12 @@ public class Collect {
 	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
-	public Collect(Integer id, String text, String url, Date created, Integer user_id) {
-		super();
-		this.id = id;
-		this.text = text;
-		this.url = url;
-		this.created = created;
-		this.user_id = user_id;
+	@Override
+	public String toString() {
+		return "Collect [id=" + id + ", text=" + text + ", url=" + url + ", created=" + created + ", user_id=" + user_id
+				+ "]";
 	}
+	
 
 	
 }

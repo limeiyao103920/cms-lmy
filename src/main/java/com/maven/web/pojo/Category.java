@@ -1,13 +1,13 @@
 package com.maven.web.pojo;
 
 public class Category {
-
 	/**  **/
 	private Integer id;
 	/** 名称 **/
 	private String name;
 	/** 频道Id **/
 	private Integer channel_id;
+	
 	public Integer getId() {
 		return id;
 	}

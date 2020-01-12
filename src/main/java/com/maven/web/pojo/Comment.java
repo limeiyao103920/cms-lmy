@@ -3,51 +3,52 @@ package com.maven.web.pojo;
 import java.util.Date;
 
 public class Comment {
-
 	/**  **/
 	private Integer id;
-	/**  **/
-	private String text;
-	/**  **/
-	private String url;
-	/**  **/
+	/** 文章Id **/
+	private Integer articleId;
+	/** 用户Id **/
+	private Integer userId;
+	/** 评论内容 **/
+	private String content;
+	/** 评论时间 **/
 	private Date created;
-	/**  **/
-	private Integer user_id;
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getText() {
-		return text;
+	public Integer getArticleId() {
+		return articleId;
 	}
-	public void setText(String text) {
-		this.text = text;
+	public void setArticleId(Integer articleId) {
+		this.articleId = articleId;
 	}
-	public String getUrl() {
-		return url;
+	public Integer getUserId() {
+		return userId;
 	}
-	public void setUrl(String url) {
-		this.url = url;
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
 	public Date getCreated() {
 		return created;
 	}
 	public void setCreated(Date created) {
 		this.created = created;
 	}
-	public Integer getUser_id() {
-		return user_id;
-	}
-	public void setUser_id(Integer user_id) {
-		this.user_id = user_id;
-	}
 	@Override
 	public String toString() {
-		return "Comment [id=" + id + ", text=" + text + ", url=" + url + ", user_id=" + user_id + "]";
+		return "Comment [id=" + id + ", articleId=" + articleId + ", userId=" + userId + ", content=" + content
+				+ ", created=" + created + "]";
 	}
-
+	
 	
 }

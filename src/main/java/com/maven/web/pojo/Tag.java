@@ -1,7 +1,6 @@
 package com.maven.web.pojo;
 
 public class Tag {
-
 	/**  **/
 	private Integer id;
 	/** 标签名称 **/

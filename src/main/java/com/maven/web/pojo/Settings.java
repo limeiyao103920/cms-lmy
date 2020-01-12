@@ -1,7 +1,6 @@
 package com.maven.web.pojo;
 
 public class Settings {
-
 	/**  **/
 	private Integer id;
 	/** 网站域名 **/
